@@ -164,7 +164,7 @@ function aceitou(){
 
         <p>Quando você está livre?</p>
 
-        <input type="date" id="data">
+        <input type="date" id="data" min="${hoje}" required>
 
         <p>O que você prefere?</p>
 
@@ -195,6 +195,18 @@ document.getElementById("role").value;
 
 if(data === ""){
     alert("🥺 Você precisa escolher uma data primeiro ❤️");
+    return;
+}
+
+const hoje = new Date();
+hoje.setHours(0,0,0,0);
+
+const dataSelecionada = new Date(data);
+
+if(dataSelecionada < hoje){
+
+    alert("🥺 Acho que ainda não inventaram viagem no tempo. Escolhe uma data futura ❤️");
+
     return;
 }
 
