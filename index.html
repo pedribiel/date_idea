@@ -166,7 +166,27 @@ function aceitou(){
 
         <p>Quando você está livre?</p>
 
-        <input type="date" id="data" min="${hoje}" required>
+        <select id="data">      
+            
+            <option value="">Selecione uma data ❤️</option>      
+            
+            <option value="2026-07-17">         
+                Sexta • 17/07/2026     
+            </option>      
+            
+            <option value="2026-07-18">         
+                Sábado • 18/07/2026     
+            </option>      
+            
+            <option value="2026-07-23">         
+                Quinta • 23/07/2026     
+            </option>      
+        
+            <option value="2026-07-26">         
+                Domingo • 26/07/2026     
+            </option>  
+        
+        </select>
 
         <p>O que você prefere?</p>
 
@@ -174,7 +194,6 @@ function aceitou(){
 
             <option>🍔 Comer hambúrguer</option>
             <option>🍕 Comer pizza</option>
-            <option>☕ Ir em uma cafeteria</option>
             <option>🎬 Ir ao cinema</option>
             <option>🌳 Passear no parque</option>
 
@@ -197,18 +216,6 @@ document.getElementById("role").value;
 
 if(data === ""){
     alert("🥺 Você precisa escolher uma data primeiro ❤️");
-    return;
-}
-
-const hoje = new Date();
-hoje.setHours(0,0,0,0);
-
-const dataSelecionada = new Date(data);
-
-if(dataSelecionada < hoje){
-
-    alert("🥺 Acho que ainda não inventaram viagem no tempo. Escolhe uma data futura ❤️");
-
     return;
 }
 
